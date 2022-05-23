@@ -1,4 +1,10 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+
+ul {
+  margin: 0;
+}
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +16,97 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.main {
+  padding: 0;
+}
+
+/* Header  */
+.header{
+  height: 70px;
+  padding: 10px 61px;
+  background-color: #101010;
+}
+
+.navbar-btns {
+  gap: 10px;
+}
+
+.btn {
+  height: 40px;
+  padding: 10px 20px;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+}
+
+.btn-left {
+  width: 257px;
+}
+
+.btn-right {
+  width: 205px;
+}
+
+/* User list  */
+.main-list {
+  border: 1px solid #000000;
+  margin-top: 36px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 35px;
+}
+
+.col-lg-1 {
+  width: 5.5%;
+}
+
+.col:not(:last-child) {
+  border-right: 1px solid #000000;
+}
+
+.list-item__name:hover {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 1px solid #000000;
+}
+
+/* User  */
+.row-info {
+  min-height: 45px;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Post */
+.row-posts {
+  padding: 1.6% 5.5%;
+}
+
+.post-item {
+  padding: 14px 35px;
+  border: 1px solid #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.41);
+  font-family: 'Open Sans';
+}
+
+.post-item h4 {
+  color: #000000;
+  white-space: normal;
+}
+
+.post-item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-item:hover {
+  outline: 1px solid #000000;
+  cursor: pointer;
 }
