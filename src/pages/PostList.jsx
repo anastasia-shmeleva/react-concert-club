@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 
 export default function PostList() {
   const navigate = useNavigate();
-  const { posts } = useSelector((store) => store.userSlice);
+  const { posts } = useSelector((store) => store.postSlice);
 
   return(
     <Fragment>
