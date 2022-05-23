@@ -8,10 +8,10 @@ import { nanoid } from 'nanoid';
 export default function UserPosts() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { posts } = useSelector((store) => store.userSlice);
+  const { user, posts } = useSelector((store) => store.userSlice);
 
   useEffect(() => {
-    dispatch(fetchPosts('https://jsonplaceholder.typicode.com/posts'));
+    dispatch(fetchPosts(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`));
   }, [dispatch])
 
   const handleClick = () => {

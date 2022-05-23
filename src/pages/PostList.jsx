@@ -10,7 +10,7 @@ export default function PostList() {
 
   return(
     <Fragment>
-      <div className='container-xl main-list '>
+      <div className='container-xl main-list'>
         <div className='list-item row row-posts'>
           <div className='row'>Посты</div>
           <div className='d-flex flex-column p-0 gap-3'>

@@ -15,7 +15,6 @@ function App() {
         <Route path='/user' element={<User/>}></Route>
         <Route path='/user/posts' element={<PostList/>}></Route>
         <Route path='/user/posts/:id' element={<Post/>}></Route>
-        {/* <Route path='*' element={<NotFound/>}></Route> */}
       </Routes>
     </main>
   </Router>
