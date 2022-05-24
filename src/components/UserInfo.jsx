@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { useSelector } from "react-redux";
 
 export default function UserInfo() {
-  const { user } = useSelector((store) => store.userSlice);
+  const { user } = useSelector((store) => store.appSlice);
 
   return(
     <Fragment>

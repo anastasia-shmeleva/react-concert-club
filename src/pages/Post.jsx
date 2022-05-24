@@ -1,14 +1,13 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { fetchComments, postComment } from "../redux/commentSlice";
+import { fetchComments, postComment } from "../redux/appSlice";
 import Comment from '../components/Comment';
 import { nanoid } from 'nanoid';
 
 export default function Post() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const { post } = useSelector((store) => store.postSlice);
-  const { comments } = useSelector((store) => store.commentSlice);
+  const { post, comments } = useSelector((store) => store.appSlice);
   const url = `https://jsonplaceholder.typicode.com/posts/${post.id}/comments`
 
   useEffect(() => {

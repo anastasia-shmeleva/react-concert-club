@@ -1,20 +1,20 @@
 import { Fragment, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { fetchUsers, userActions } from "../redux/userSlice";
+import { fetchUsers, appActions } from "../redux/appSlice";
 import { nanoid } from 'nanoid';
 
 export default function UserList() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { users } = useSelector((store) => store.userSlice);
+  const { users } = useSelector((store) => store.appSlice);
 
   useEffect(() => {
     dispatch(fetchUsers('https://jsonplaceholder.typicode.com/users'));
   }, [dispatch])
   
   const handleClick = (id) => {
-    dispatch(userActions.setUser(id));
+    dispatch(appActions.setUser(id));
     navigate('/user');
   }
 

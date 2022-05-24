@@ -1,15 +1,14 @@
 import { Fragment, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { fetchPosts } from "../redux/postSlice";
+import { fetchPosts } from "../redux/appSlice";
 import PostPreview from "./PostPreview";
 import { nanoid } from 'nanoid';
 
 export default function UserPosts() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user } = useSelector((store) => store.userSlice);
-  const { posts } = useSelector((store) => store.postSlice);
+  const { user, posts } = useSelector((store) => store.appSlice);
 
   useEffect(() => {
     dispatch(fetchPosts(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`));

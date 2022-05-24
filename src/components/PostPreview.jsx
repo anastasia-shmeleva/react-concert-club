@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { postActions } from "../redux/postSlice";
+import { appActions } from "../redux/appSlice";
 
 export default function PostPreview(props) {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export default function PostPreview(props) {
   } = props.children;
 
   const handleClick = () => {
-    dispatch(postActions.setPost(id));
+    dispatch(appActions.setPost(id));
     navigate(`/user/posts/${id}`);
   }
 
